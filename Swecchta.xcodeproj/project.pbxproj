@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6B61EE41A2C68EFFFC4C9989 /* Pods_Swecchta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */; };
+		D654527620026E6200F652BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654527520026E6200F652BE /* Main.storyboard */; };
+		D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65452772002AF2900F652BE /* SignUpViewController.swift */; };
 		D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887511FFE5DF500C829D3 /* AppDelegate.swift */; };
-		D69887541FFE5DF500C829D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887531FFE5DF500C829D3 /* ViewController.swift */; };
-		D69887571FFE5DF500C829D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69887551FFE5DF500C829D3 /* Main.storyboard */; };
+		D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887531FFE5DF500C829D3 /* LoginViewController.swift */; };
+		D69887571FFE5DF500C829D3 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69887551FFE5DF500C829D3 /* Start.storyboard */; };
 		D698875A1FFE5DF500C829D3 /* Swecchta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D69887581FFE5DF500C829D3 /* Swecchta.xcdatamodeld */; };
 		D698875C1FFE5DF500C829D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698875B1FFE5DF500C829D3 /* Assets.xcassets */; };
 		D698875F1FFE5DF500C829D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */; };
@@ -21,10 +23,13 @@
 		76DFD91DC4370C44C583E245 /* Pods-Swecchta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.release.xcconfig"; sourceTree = "<group>"; };
 		9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swecchta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1C19B9C88819EE11824DC1 /* Pods-Swecchta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.debug.xcconfig"; sourceTree = "<group>"; };
+		D654527520026E6200F652BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D65452772002AF2900F652BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swecchta.entitlements; sourceTree = "<group>"; };
 		D698874E1FFE5DF500C829D3 /* Swecchta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swecchta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69887511FFE5DF500C829D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D69887531FFE5DF500C829D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D69887561FFE5DF500C829D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D69887531FFE5DF500C829D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D69887561FFE5DF500C829D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
 		D69887591FFE5DF500C829D3 /* Swecchta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swecchta.xcdatamodel; sourceTree = "<group>"; };
 		D698875B1FFE5DF500C829D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D698875E1FFE5DF500C829D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,9 +79,12 @@
 		D69887501FFE5DF500C829D3 /* Swecchta */ = {
 			isa = PBXGroup;
 			children = (
+				D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */,
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
-				D69887531FFE5DF500C829D3 /* ViewController.swift */,
-				D69887551FFE5DF500C829D3 /* Main.storyboard */,
+				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
+				D65452772002AF2900F652BE /* SignUpViewController.swift */,
+				D69887551FFE5DF500C829D3 /* Start.storyboard */,
+				D654527520026E6200F652BE /* Main.storyboard */,
 				D698875B1FFE5DF500C829D3 /* Assets.xcassets */,
 				D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */,
 				D69887601FFE5DF500C829D3 /* Info.plist */,
@@ -130,6 +138,11 @@
 					D698874D1FFE5DF500C829D3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -157,9 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D698875F1FFE5DF500C829D3 /* LaunchScreen.storyboard in Resources */,
+				D654527620026E6200F652BE /* Main.storyboard in Resources */,
 				D69887671FFE80E500C829D3 /* GoogleService-Info.plist in Resources */,
 				D698875C1FFE5DF500C829D3 /* Assets.xcassets in Resources */,
-				D69887571FFE5DF500C829D3 /* Main.storyboard in Resources */,
+				D69887571FFE5DF500C829D3 /* Start.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,11 +202,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 			);
@@ -226,8 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69887541FFE5DF500C829D3 /* ViewController.swift in Sources */,
+				D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */,
 				D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */,
+				D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */,
 				D698875A1FFE5DF500C829D3 /* Swecchta.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,12 +258,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D69887551FFE5DF500C829D3 /* Main.storyboard */ = {
+		D69887551FFE5DF500C829D3 /* Start.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D69887561FFE5DF500C829D3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Start.storyboard;
 			sourceTree = "<group>";
 		};
 		D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */ = {
@@ -366,6 +389,7 @@
 			baseConfigurationReference = BD1C19B9C88819EE11824DC1 /* Pods-Swecchta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Swecchta/Swecchta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CY38GJLA6;
 				INFOPLIST_FILE = Swecchta/Info.plist;
@@ -382,6 +406,7 @@
 			baseConfigurationReference = 76DFD91DC4370C44C583E245 /* Pods-Swecchta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Swecchta/Swecchta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CY38GJLA6;
 				INFOPLIST_FILE = Swecchta/Info.plist;
