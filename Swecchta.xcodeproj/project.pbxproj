@@ -17,6 +17,11 @@
 		D698875C1FFE5DF500C829D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698875B1FFE5DF500C829D3 /* Assets.xcassets */; };
 		D698875F1FFE5DF500C829D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */; };
 		D69887671FFE80E500C829D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D69887661FFE80E500C829D3 /* GoogleService-Info.plist */; };
+		D6ADA23620036D1C00AFC03F /* AllPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23520036D1C00AFC03F /* AllPosts.storyboard */; };
+		D6ADA23820036D3900AFC03F /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23720036D3900AFC03F /* Inbox.storyboard */; };
+		D6ADA23A20036D5300AFC03F /* CreatePost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23920036D5300AFC03F /* CreatePost.storyboard */; };
+		D6ADA23C20036D6300AFC03F /* LocateDustbin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */; };
+		D6ADA23E20036D7D00AFC03F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23D20036D7D00AFC03F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		D698875E1FFE5DF500C829D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D69887601FFE5DF500C829D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D69887661FFE80E500C829D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6ADA23520036D1C00AFC03F /* AllPosts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllPosts.storyboard; sourceTree = "<group>"; };
+		D6ADA23720036D3900AFC03F /* Inbox.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inbox.storyboard; sourceTree = "<group>"; };
+		D6ADA23920036D5300AFC03F /* CreatePost.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePost.storyboard; sourceTree = "<group>"; };
+		D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocateDustbin.storyboard; sourceTree = "<group>"; };
+		D6ADA23D20036D7D00AFC03F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +89,22 @@
 		D69887501FFE5DF500C829D3 /* Swecchta */ = {
 			isa = PBXGroup;
 			children = (
-				D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */,
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
 				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
 				D65452772002AF2900F652BE /* SignUpViewController.swift */,
 				D69887551FFE5DF500C829D3 /* Start.storyboard */,
 				D654527520026E6200F652BE /* Main.storyboard */,
-				D698875B1FFE5DF500C829D3 /* Assets.xcassets */,
+				D6ADA23D20036D7D00AFC03F /* Profile.storyboard */,
+				D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */,
+				D6ADA23920036D5300AFC03F /* CreatePost.storyboard */,
+				D6ADA23720036D3900AFC03F /* Inbox.storyboard */,
+				D6ADA23520036D1C00AFC03F /* AllPosts.storyboard */,
 				D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */,
 				D69887601FFE5DF500C829D3 /* Info.plist */,
 				D69887661FFE80E500C829D3 /* GoogleService-Info.plist */,
 				D69887581FFE5DF500C829D3 /* Swecchta.xcdatamodeld */,
+				D698875B1FFE5DF500C829D3 /* Assets.xcassets */,
+				D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */,
 			);
 			path = Swecchta;
 			sourceTree = "<group>";
@@ -171,9 +186,14 @@
 			files = (
 				D698875F1FFE5DF500C829D3 /* LaunchScreen.storyboard in Resources */,
 				D654527620026E6200F652BE /* Main.storyboard in Resources */,
+				D6ADA23E20036D7D00AFC03F /* Profile.storyboard in Resources */,
 				D69887671FFE80E500C829D3 /* GoogleService-Info.plist in Resources */,
 				D698875C1FFE5DF500C829D3 /* Assets.xcassets in Resources */,
+				D6ADA23820036D3900AFC03F /* Inbox.storyboard in Resources */,
+				D6ADA23620036D1C00AFC03F /* AllPosts.storyboard in Resources */,
+				D6ADA23A20036D5300AFC03F /* CreatePost.storyboard in Resources */,
 				D69887571FFE5DF500C829D3 /* Start.storyboard in Resources */,
+				D6ADA23C20036D6300AFC03F /* LocateDustbin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
