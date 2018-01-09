@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aaa-rZ-aXt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kbg-vf-Gvw">
+            <objects>
+                <viewController id="Aaa-rZ-aXt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z22-Me-616">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocateBg" translatesAutoresizingMaskIntoConstraints="NO" id="pT6-i4-jga">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="top" secondItem="z22-Me-616" secondAttribute="top" id="Cam-jS-mXl"/>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="leading" secondItem="yQO-K7-PCT" secondAttribute="leading" id="fJ7-C9-Ozn"/>
+                            <constraint firstAttribute="bottom" secondItem="pT6-i4-jga" secondAttribute="bottom" id="rbC-LD-XZ7"/>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="trailing" secondItem="yQO-K7-PCT" secondAttribute="trailing" id="xGY-nh-lbD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yQO-K7-PCT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-trash-can-100" selectedImage="icons8-trash-can-filled-100" id="1eD-4I-E9r">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e38-bw-cyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LocateBg" width="750" height="1334"/>
+        <image name="icons8-trash-can-100" width="33" height="33"/>
+        <image name="icons8-trash-can-filled-100" width="33" height="33"/>
+    </resources>
+</document>

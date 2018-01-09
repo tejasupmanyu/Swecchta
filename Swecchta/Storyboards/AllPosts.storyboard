@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YiV-7r-Qsg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="WgG-I5-sH2">
+            <objects>
+                <viewController id="YiV-7r-Qsg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n4a-cI-rMo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PostsBg" translatesAutoresizingMaskIntoConstraints="NO" id="C2X-uT-W90">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C2X-uT-W90" firstAttribute="top" secondItem="n4a-cI-rMo" secondAttribute="top" id="Ebq-z2-ZcL"/>
+                            <constraint firstItem="C2X-uT-W90" firstAttribute="trailing" secondItem="02J-TC-Efk" secondAttribute="trailing" id="QWf-wr-ihI"/>
+                            <constraint firstAttribute="bottom" secondItem="C2X-uT-W90" secondAttribute="bottom" id="SV2-fc-BhD"/>
+                            <constraint firstItem="C2X-uT-W90" firstAttribute="leading" secondItem="02J-TC-Efk" secondAttribute="leading" id="doe-4p-1iq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="02J-TC-Efk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-check-all-100" selectedImage="icons8-check-all-filled-100" springLoaded="YES" id="che-81-Fdq">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZh-0R-NK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PostsBg" width="750" height="1334"/>
+        <image name="icons8-check-all-100" width="33" height="33"/>
+        <image name="icons8-check-all-filled-100" width="33" height="33"/>
+    </resources>
+</document>

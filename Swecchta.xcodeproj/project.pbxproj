@@ -10,6 +10,7 @@
 		6B61EE41A2C68EFFFC4C9989 /* Pods_Swecchta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */; };
 		D654527620026E6200F652BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654527520026E6200F652BE /* Main.storyboard */; };
 		D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65452772002AF2900F652BE /* SignUpViewController.swift */; };
+		D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666DF47200552CF0038E0F1 /* ProfileViewController.swift */; };
 		D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887511FFE5DF500C829D3 /* AppDelegate.swift */; };
 		D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887531FFE5DF500C829D3 /* LoginViewController.swift */; };
 		D69887571FFE5DF500C829D3 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69887551FFE5DF500C829D3 /* Start.storyboard */; };
@@ -22,6 +23,7 @@
 		D6ADA23A20036D5300AFC03F /* CreatePost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23920036D5300AFC03F /* CreatePost.storyboard */; };
 		D6ADA23C20036D6300AFC03F /* LocateDustbin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */; };
 		D6ADA23E20036D7D00AFC03F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23D20036D7D00AFC03F /* Profile.storyboard */; };
+		D6D7CA7C20054386000A6808 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7CA7B20054386000A6808 /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		BD1C19B9C88819EE11824DC1 /* Pods-Swecchta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.debug.xcconfig"; sourceTree = "<group>"; };
 		D654527520026E6200F652BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D65452772002AF2900F652BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D666DF47200552CF0038E0F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swecchta.entitlements; sourceTree = "<group>"; };
 		D698874E1FFE5DF500C829D3 /* Swecchta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swecchta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69887511FFE5DF500C829D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		D6ADA23920036D5300AFC03F /* CreatePost.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePost.storyboard; sourceTree = "<group>"; };
 		D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocateDustbin.storyboard; sourceTree = "<group>"; };
 		D6ADA23D20036D7D00AFC03F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		D6D7CA7B20054386000A6808 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,21 @@
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
 				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
 				D65452772002AF2900F652BE /* SignUpViewController.swift */,
+				D666DF47200552CF0038E0F1 /* ProfileViewController.swift */,
+				D6D7CA7B20054386000A6808 /* RoundImageView.swift */,
+				D6ADA23F2003711F00AFC03F /* Storyboards */,
+				D69887601FFE5DF500C829D3 /* Info.plist */,
+				D69887661FFE80E500C829D3 /* GoogleService-Info.plist */,
+				D69887581FFE5DF500C829D3 /* Swecchta.xcdatamodeld */,
+				D698875B1FFE5DF500C829D3 /* Assets.xcassets */,
+				D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */,
+			);
+			path = Swecchta;
+			sourceTree = "<group>";
+		};
+		D6ADA23F2003711F00AFC03F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				D69887551FFE5DF500C829D3 /* Start.storyboard */,
 				D654527520026E6200F652BE /* Main.storyboard */,
 				D6ADA23D20036D7D00AFC03F /* Profile.storyboard */,
@@ -100,13 +119,8 @@
 				D6ADA23720036D3900AFC03F /* Inbox.storyboard */,
 				D6ADA23520036D1C00AFC03F /* AllPosts.storyboard */,
 				D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */,
-				D69887601FFE5DF500C829D3 /* Info.plist */,
-				D69887661FFE80E500C829D3 /* GoogleService-Info.plist */,
-				D69887581FFE5DF500C829D3 /* Swecchta.xcdatamodeld */,
-				D698875B1FFE5DF500C829D3 /* Assets.xcassets */,
-				D669AAED1FFFEC8C00C4D81E /* Swecchta.entitlements */,
 			);
-			path = Swecchta;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F96A6C49FD6B90927AA3A4BC /* Frameworks */ = {
@@ -268,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */,
+				D6D7CA7C20054386000A6808 /* RoundImageView.swift in Sources */,
 				D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */,
 				D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */,
 				D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */,

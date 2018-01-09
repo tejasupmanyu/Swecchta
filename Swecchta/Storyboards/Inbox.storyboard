@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfp-hR-e8z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="98g-Ut-2ld">
+            <objects>
+                <viewController id="qfp-hR-e8z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2oK-5F-xSM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlainBg" translatesAutoresizingMaskIntoConstraints="NO" id="qpW-Xc-L4X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qpW-Xc-L4X" firstAttribute="leading" secondItem="awn-ix-XFQ" secondAttribute="leading" id="Wvj-oG-tLJ"/>
+                            <constraint firstItem="qpW-Xc-L4X" firstAttribute="top" secondItem="2oK-5F-xSM" secondAttribute="top" id="Xmw-mF-wQl"/>
+                            <constraint firstItem="qpW-Xc-L4X" firstAttribute="trailing" secondItem="awn-ix-XFQ" secondAttribute="trailing" id="iQy-Wl-dAt"/>
+                            <constraint firstAttribute="bottom" secondItem="qpW-Xc-L4X" secondAttribute="bottom" id="qIh-wQ-k0a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="awn-ix-XFQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-inbox-100" selectedImage="icons8-inbox-filled-100" id="irx-YI-bhr">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGZ-iy-3Dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlainBg" width="750" height="1334"/>
+        <image name="icons8-inbox-100" width="33" height="33"/>
+        <image name="icons8-inbox-filled-100" width="33" height="33"/>
+    </resources>
+</document>

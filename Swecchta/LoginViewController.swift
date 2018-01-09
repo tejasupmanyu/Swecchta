@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FBSDKLoginKit
 class LoginViewController: UIViewController{
     
@@ -26,9 +27,44 @@ class LoginViewController: UIViewController{
         passTextField.attributedPlaceholder = NSAttributedString(string: passTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor(white: 1.0, alpha: 0.7)])
         
         loginButton.layer.cornerRadius = 4.0
-       
+        handleTextFields()
     }
     
+    func handleTextFields()
+    {
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
+        passTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
+    }
+    
+    @objc func textFieldDidChange()
+    {
+        guard let email = emailTextField.text, !email.isEmpty, let password = passTextField.text, !password.isEmpty else {
+            loginButton.setTitleColor(UIColor.lightGray, for: .normal)
+            loginButton.isEnabled = false
+            return
+        }
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        loginButton.isEnabled = true
+    }
+    
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passTextField.text!, completion: { (user, error) in
+            
+            if error != nil
+            {
+                print("error signing in!")
+                print(error!.localizedDescription)
+                return
+            }
+            
+            self.performSegue(withIdentifier: "SignInToTabBarVC", sender: nil)
+            
+        })
+        
+        
+    }
     
     
     @IBAction func handleLogin(_ sender: UIButton) {

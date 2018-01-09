@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sI5-zh-RQj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="a33-X1-pxp">
+            <objects>
+                <viewController id="sI5-zh-RQj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q9U-GE-U9D">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreateBg" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-pA-339">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bk2-pA-339" secondAttribute="bottom" id="7Qn-if-TzT"/>
+                            <constraint firstItem="bk2-pA-339" firstAttribute="leading" secondItem="EdX-Rn-2BY" secondAttribute="leading" id="VJR-Kr-DeH"/>
+                            <constraint firstItem="bk2-pA-339" firstAttribute="top" secondItem="q9U-GE-U9D" secondAttribute="top" id="gY0-QZ-WjN"/>
+                            <constraint firstItem="bk2-pA-339" firstAttribute="trailing" secondItem="EdX-Rn-2BY" secondAttribute="trailing" id="gcr-O4-Hjo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EdX-Rn-2BY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-webcam-100" selectedImage="icons8-webcam-filled-100" springLoaded="YES" id="AGv-ww-yaQ">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFJ-Lf-Ewk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CreateBg" width="750" height="1334"/>
+        <image name="icons8-webcam-100" width="33" height="33"/>
+        <image name="icons8-webcam-filled-100" width="33" height="33"/>
+    </resources>
+</document>

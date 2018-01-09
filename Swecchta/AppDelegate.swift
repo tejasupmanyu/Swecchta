@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Firebase
 import CoreData
 
 @UIApplicationMain
@@ -18,10 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+      
+     FIRApp.configure()
      FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        
+        // If already signed in, open tab bar directly, by setting it as initial VC
+        if FIRAuth.auth()?.currentUser != nil
+        {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let InitialVC = sb.instantiateViewController(withIdentifier: "TabBarVC")
+            self.window?.rootViewController = InitialVC
+            self.window?.makeKeyAndVisible()
+        }
+        else
+        {
+            let sb = UIStoryboard(name: "Start", bundle: nil)
+            let InitialVC = sb.instantiateViewController(withIdentifier: "SignInViewController")
+            self.window?.rootViewController = InitialVC
+            self.window?.makeKeyAndVisible()
+        }
+      
         return true
     }
     
