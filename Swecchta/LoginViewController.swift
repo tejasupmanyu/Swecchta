@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import SwiftSpinner
+
 class LoginViewController: UIViewController{
     
     
@@ -27,6 +29,7 @@ class LoginViewController: UIViewController{
         passTextField.attributedPlaceholder = NSAttributedString(string: passTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor(white: 1.0, alpha: 0.7)])
         
         loginButton.layer.cornerRadius = 4.0
+        loginButton.isEnabled = false
         handleTextFields()
     }
     
@@ -50,22 +53,26 @@ class LoginViewController: UIViewController{
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passTextField.text!, completion: { (user, error) in
-            
-            if error != nil
-            {
-                print("error signing in!")
-                print(error!.localizedDescription)
-                return
-            }
-            
+        view.endEditing(true)
+        SwiftSpinner.show("Authenticating")
+        AuthServices.signIn(email: emailTextField.text!, password: passTextField.text!, onSuccess: {
+            SwiftSpinner.hide()
             self.performSegue(withIdentifier: "SignInToTabBarVC", sender: nil)
             
-        })
+        }) { (error) in
+            // swiftspinner for Activity Indicator View. 
+            SwiftSpinner.show(error, animated: false).addTapHandler({
+                SwiftSpinner.hide()
+            }, subtitle: "Tap To Try Again!")
+        }
         
         
     }
     
+    // touching anywhere else on the screen except keyboard makes It give up Its first Responder Status
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
     @IBAction func handleLogin(_ sender: UIButton) {
         
@@ -73,7 +80,7 @@ class LoginViewController: UIViewController{
             if err != nil
             {
                 print("Custom Login Failed")
-
+                
             }
             
             
@@ -99,13 +106,13 @@ class LoginViewController: UIViewController{
             
         }
     }
-            
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

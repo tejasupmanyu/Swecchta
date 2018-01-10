@@ -8,8 +8,10 @@
 
 import UIKit
 import Firebase
-class SignUpViewController: UIViewController {
+import SwiftSpinner
 
+class SignUpViewController: UIViewController {
+    
     var selectedProfileImage : UIImage?
     
     @IBOutlet weak var ProfileImageView: UIImageView!
@@ -49,7 +51,7 @@ class SignUpViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectProfileImageView))
         ProfileImageView.addGestureRecognizer(tapGesture)
         ProfileImageView.isUserInteractionEnabled = true
-        
+        joinButton.isEnabled = false
         handleTextFields()
     }
     
@@ -82,56 +84,33 @@ class SignUpViewController: UIViewController {
         joinButton.isEnabled = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func JoinButtonPressed(_ sender: UIButton) {
-        
-        if let email = emailTextField.text
+        view.endEditing(true)
+        SwiftSpinner.show("Signing You Up...", animated: true)
+        if confPassTextField.text! == passTextField.text!
         {
-            if let pass = passTextField.text
+            if let profileImg = self.selectedProfileImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.4)
             {
-                if pass == confPassTextField.text
-                {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user : FIRUser?, error : Error?) in
-                        
-                        if error != nil
-                        {
-                            print(error?.localizedDescription)
-                            print("error creating user")
-                            return
-                        }
-                        
-                        let uid = user?.uid
-                        let storageRef = FIRStorage.storage().reference() // reference to Firebase Storage
-                        print(storageRef.description)
-                        let allProfileImagesReference = storageRef.child("profile_images")
-                        let userProfileImageReference = allProfileImagesReference.child(uid!)
-                    
-                        if let profileImg = self.selectedProfileImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.4)
-                        {
-                            userProfileImageReference.put(imageData, metadata: nil, completion: { (metadata, error) in
-
-                                if error != nil
-                                {
-                                    print("some error uploading Image to Firebase Storage")
-                                    return
-                                }
-                        
-                                let profileImageURLString = metadata?.downloadURL()?.absoluteString
-                                let DBRef = FIRDatabase.database().reference()      // reference to Firebase Datbase
-                                let usersReference = DBRef.child("users")
-                                let newUserReference = usersReference.child(uid!)
-                                newUserReference.setValue(["user_name" : self.nameTextField.text!, "email" : self.emailTextField.text!, "mobile" : self.mobileTextField.text!, "profile_Image_URLString" : profileImageURLString])
-                                self.performSegue(withIdentifier: "SignUpToTabBarVC", sender: nil)
-                            })
-                        }
-                    })
-                }
-                else // password and confirm password fields are not same
-                {
-                    print("Passwords don't match!")
-                    return
-                }
-                
+                AuthServices.signUp(userName: nameTextField.text!, email: emailTextField.text!, password: passTextField.text!,mobile: mobileTextField.text!, imageData: imageData, onSuccess: {
+                    SwiftSpinner.hide()
+                    self.performSegue(withIdentifier: "SignUpToTabBarVC", sender: nil)
+                }, onError: { (error) in
+                    SwiftSpinner.show(error, animated: false).addTapHandler({
+                        SwiftSpinner.hide()
+                    }, subtitle: "Tap To Try Again!")
+                })
             }
+        }
+        else
+        {
+            SwiftSpinner.show("Passwords Don't Match", animated: false).addTapHandler({
+                SwiftSpinner.hide()
+            }, subtitle: "Tap To Try Again!")
+            return
         }
         
     }
@@ -141,7 +120,7 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
 }
 
 extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate

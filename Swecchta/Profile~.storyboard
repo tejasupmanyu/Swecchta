@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NM4-9k-laz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="E4h-M7-Dmx">
+            <objects>
+                <viewController id="Hfo-ym-TS5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TmR-1M-nW4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBg" translatesAutoresizingMaskIntoConstraints="NO" id="alo-SU-Yhy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="alo-SU-Yhy" firstAttribute="top" secondItem="TmR-1M-nW4" secondAttribute="top" id="UGX-Jj-j8K"/>
+                            <constraint firstAttribute="bottom" secondItem="alo-SU-Yhy" secondAttribute="bottom" id="afw-3o-ozu"/>
+                            <constraint firstItem="alo-SU-Yhy" firstAttribute="leading" secondItem="VSt-gH-FFx" secondAttribute="leading" id="hFk-DL-AgN"/>
+                            <constraint firstItem="alo-SU-Yhy" firstAttribute="trailing" secondItem="VSt-gH-FFx" secondAttribute="trailing" id="hnH-Id-zIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VSt-gH-FFx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-male-user-100" selectedImage="icons8-male-user-filled-100" id="NtI-D4-uyg">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55O-d4-XMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3370" y="600"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Go4-CC-nm9">
+            <objects>
+                <tabBarController id="NM4-9k-laz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tFQ-r9-cng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TFZ-VR-ElI" kind="relationship" relationship="viewControllers" id="N9n-7E-Mhx"/>
+                        <segue destination="WBY-WH-OMY" kind="relationship" relationship="viewControllers" id="2Ns-kG-QyD"/>
+                        <segue destination="nWF-f6-cMG" kind="relationship" relationship="viewControllers" id="bpG-df-N1n"/>
+                        <segue destination="PCc-nv-OaB" kind="relationship" relationship="viewControllers" id="lYE-2v-9r9"/>
+                        <segue destination="Hfo-ym-TS5" kind="relationship" relationship="viewControllers" id="Jlc-mc-sPI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjo-nW-Laq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="-459"/>
+        </scene>
+        <!--AllPosts-->
+        <scene sceneID="6os-SB-nsu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AllPosts" id="TFZ-VR-ElI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ttv-uY-1L0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6g-fb-m9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="600"/>
+        </scene>
+        <!--Inbox-->
+        <scene sceneID="WEs-Ae-QIs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Inbox" id="WBY-WH-OMY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0Xy-S1-zSw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEU-70-0ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="600"/>
+        </scene>
+        <!--CreatePost-->
+        <scene sceneID="uGh-Hh-hvp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreatePost" id="nWF-f6-cMG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Qlt-c5-Jlr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqg-18-YvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="600"/>
+        </scene>
+        <!--LocateDustbin-->
+        <scene sceneID="XoO-id-zch">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LocateDustbin" id="PCc-nv-OaB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dwh-Mg-sW2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W80-27-2Nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="600"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ProfileBg" width="750" height="1334"/>
+        <image name="icons8-male-user-100" width="33" height="33"/>
+        <image name="icons8-male-user-filled-100" width="33" height="33"/>
+    </resources>
+</document>

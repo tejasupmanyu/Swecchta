@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6B61EE41A2C68EFFFC4C9989 /* Pods_Swecchta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */; };
+		D63154312006579B00CCCE90 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154302006579B00CCCE90 /* AuthServices.swift */; };
+		D63154332006674700CCCE90 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154322006674700CCCE90 /* Config.swift */; };
+		D63154352006979200CCCE90 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154342006979200CCCE90 /* CreatePostViewController.swift */; };
+		D631543720069CF300CCCE90 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631543620069CF300CCCE90 /* RoundButton.swift */; };
 		D654527620026E6200F652BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654527520026E6200F652BE /* Main.storyboard */; };
 		D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65452772002AF2900F652BE /* SignUpViewController.swift */; };
 		D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666DF47200552CF0038E0F1 /* ProfileViewController.swift */; };
@@ -30,6 +34,10 @@
 		76DFD91DC4370C44C583E245 /* Pods-Swecchta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.release.xcconfig"; sourceTree = "<group>"; };
 		9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swecchta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1C19B9C88819EE11824DC1 /* Pods-Swecchta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.debug.xcconfig"; sourceTree = "<group>"; };
+		D63154302006579B00CCCE90 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		D63154322006674700CCCE90 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D63154342006979200CCCE90 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		D631543620069CF300CCCE90 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		D654527520026E6200F652BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D65452772002AF2900F652BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D666DF47200552CF0038E0F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -94,10 +102,14 @@
 			isa = PBXGroup;
 			children = (
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
+				D63154302006579B00CCCE90 /* AuthServices.swift */,
+				D63154322006674700CCCE90 /* Config.swift */,
 				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
 				D65452772002AF2900F652BE /* SignUpViewController.swift */,
 				D666DF47200552CF0038E0F1 /* ProfileViewController.swift */,
+				D63154342006979200CCCE90 /* CreatePostViewController.swift */,
 				D6D7CA7B20054386000A6808 /* RoundImageView.swift */,
+				D631543620069CF300CCCE90 /* RoundButton.swift */,
 				D6ADA23F2003711F00AFC03F /* Storyboards */,
 				D69887601FFE5DF500C829D3 /* Info.plist */,
 				D69887661FFE80E500C829D3 /* GoogleService-Info.plist */,
@@ -242,6 +254,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -251,6 +264,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -284,9 +298,13 @@
 			files = (
 				D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */,
 				D6D7CA7C20054386000A6808 /* RoundImageView.swift in Sources */,
+				D63154312006579B00CCCE90 /* AuthServices.swift in Sources */,
 				D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */,
 				D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */,
+				D63154332006674700CCCE90 /* Config.swift in Sources */,
+				D631543720069CF300CCCE90 /* RoundButton.swift in Sources */,
 				D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */,
+				D63154352006979200CCCE90 /* CreatePostViewController.swift in Sources */,
 				D698875A1FFE5DF500C829D3 /* Swecchta.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
