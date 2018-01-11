@@ -18,5 +18,5 @@ target 'Swecchta' do
 
 
 	pod "SwiftSpinner"
-
+    
 end

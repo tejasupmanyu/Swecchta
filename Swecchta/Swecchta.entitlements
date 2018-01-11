@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)In.VisionArray.Swecchta</string>
+		<string>$(AppIdentifierPrefix)(null)</string>
 	</array>
 </dict>
 </plist>

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreLocation
+import SwiftSpinner
 
 class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
     
@@ -112,6 +113,49 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     @IBAction func submitButtonPressed(_ sender: RoundButton) {
+        
+        ProgressHUD.show("Posting...", interaction: false)
+        
+            if let postImg = self.selectedPostImage, let imageData = UIImageJPEGRepresentation(postImg, 0.4)
+            {
+                let postID = NSUUID().uuidString
+                let storageRef = Config.STORAGE_ROOT_REFERENCE.child("posts").child(postID)
+                storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
+                    if error != nil
+                    {
+                        ProgressHUD.showError(error!.localizedDescription)
+                        return
+                    }
+                    
+                    let postURL = metadata?.downloadURL()?.absoluteString
+                    self.sendDataToDatabase(postImageURL: postURL!)
+                })
+            }
+            else
+            {
+                ProgressHUD.showError("No Image Selected")
+            }
+    }
+    
+    func sendDataToDatabase(postImageURL : String)
+    {
+        let dbRef = Config.DB_ROOT_REFERENCE
+        let postRef = dbRef.child("posts")
+        let newPostRef = postRef.child(postRef.childByAutoId().key)
+        newPostRef.setValue(["postImageURL":postImageURL,"description": descriptionTextField.text!]) { (error, ref) in
+            
+            if error != nil
+            {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            ProgressHUD.showSuccess("Success")
+            //clearing out the fields
+            self.descriptionTextField.text = ""
+            self.postImageView.image = UIImage(named: "placeholder.jpg")
+            self.selectedPostImage = UIImage(named: "placeholder.jpg")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
