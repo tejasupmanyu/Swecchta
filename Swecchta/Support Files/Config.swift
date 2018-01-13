@@ -11,4 +11,6 @@ import Firebase
 struct Config {
     static var STORAGE_ROOT_REFERENCE = FIRStorage.storage().reference()
     static var DB_ROOT_REFERENCE = FIRDatabase.database().reference()
+    
+    
 }

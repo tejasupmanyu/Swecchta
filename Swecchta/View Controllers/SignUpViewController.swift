@@ -90,26 +90,24 @@ class SignUpViewController: UIViewController {
     
     @IBAction func JoinButtonPressed(_ sender: UIButton) {
         view.endEditing(true)
-        SwiftSpinner.show("Signing You Up...", animated: true)
+        
         if confPassTextField.text! == passTextField.text!
         {
+            SwiftSpinner.show("Signing You Up...", animated: true)
             if let profileImg = self.selectedProfileImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.4)
             {
                 AuthServices.signUp(userName: nameTextField.text!, email: emailTextField.text!, password: passTextField.text!,mobile: mobileTextField.text!, imageData: imageData, onSuccess: {
                     SwiftSpinner.hide()
                     self.performSegue(withIdentifier: "SignUpToTabBarVC", sender: nil)
                 }, onError: { (error) in
-                    SwiftSpinner.show(error, animated: false).addTapHandler({
-                        SwiftSpinner.hide()
-                    }, subtitle: "Tap To Try Again!")
+                    SwiftSpinner.hide()
+                    ProgressHUD.showError(error)
                 })
             }
         }
         else
         {
-            SwiftSpinner.show("Passwords Don't Match", animated: false).addTapHandler({
-                SwiftSpinner.hide()
-            }, subtitle: "Tap To Try Again!")
+            ProgressHUD.showError("Passwords Don't Match!")
             return
         }
         

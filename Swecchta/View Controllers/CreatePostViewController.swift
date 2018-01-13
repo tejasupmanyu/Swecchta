@@ -14,10 +14,13 @@ import SwiftSpinner
 class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
     
     var selectedPostImage : UIImage?
+    var currentLocationCoordinates : String?
+    var currentLocationAddress : String?
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var postImageView: UIImageView!
     
+    @IBOutlet weak var clearButton: RoundButton!
     @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var descriptionTextField: UITextView!
@@ -46,6 +49,12 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        handlePost()
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error occurred in updating locations. Did Fail With Error!")
     }
@@ -53,6 +62,7 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first
         {
+            currentLocationCoordinates = "\(location.coordinate.latitude), \(location.coordinate.longitude)"
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 if error != nil
                 {
@@ -79,7 +89,8 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
         locationManager.stopUpdatingLocation()
         print(placemark.thoroughfare ?? placemark.locality ?? "")
         print(placemark.subThoroughfare ?? placemark.subLocality ?? "")
-        locationLabel.text = "\(placemark.subThoroughfare ?? "Sub Address"), \(placemark.thoroughfare ?? "Address"), \(placemark.locality ?? "locality"), \(placemark.administrativeArea ?? "state")"
+        locationLabel.text = "\(placemark.subThoroughfare ?? "") \(placemark.thoroughfare ?? "") \(placemark.locality ?? "") \(placemark.administrativeArea ?? "")"
+        currentLocationAddress = locationLabel.text!
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -112,50 +123,90 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
         
     }
     
+    func handlePost()
+    {
+        if selectedPostImage != nil {
+            submitPostButton.isEnabled = true
+            submitPostButton.setBackgroundImage(#imageLiteral(resourceName: "Orange Fun"), for: .normal)
+            clearButton.isEnabled = true
+        }else
+        {
+            submitPostButton.isEnabled = false
+            submitPostButton.setBackgroundImage(#imageLiteral(resourceName: "Lawrencium"), for: .normal)
+            clearButton.isEnabled = false
+        }
+    }
+    
     @IBAction func submitButtonPressed(_ sender: RoundButton) {
-        
+        view.endEditing(true)
         ProgressHUD.show("Posting...", interaction: false)
         
-            if let postImg = self.selectedPostImage, let imageData = UIImageJPEGRepresentation(postImg, 0.4)
-            {
-                let postID = NSUUID().uuidString
-                let storageRef = Config.STORAGE_ROOT_REFERENCE.child("posts").child(postID)
-                storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
-                    if error != nil
-                    {
-                        ProgressHUD.showError(error!.localizedDescription)
-                        return
-                    }
-                    
-                    let postURL = metadata?.downloadURL()?.absoluteString
-                    self.sendDataToDatabase(postImageURL: postURL!)
-                })
-            }
-            else
-            {
-                ProgressHUD.showError("No Image Selected")
-            }
+        if let postImg = self.selectedPostImage, let imageData = UIImageJPEGRepresentation(postImg, 0.4)
+        {
+            let postID = NSUUID().uuidString
+            let storageRef = Config.STORAGE_ROOT_REFERENCE.child("posts").child(postID)
+            storageRef.put(imageData, metadata: nil, completion: { (metadata, error) in
+                if error != nil
+                {
+                    ProgressHUD.showError(error!.localizedDescription)
+                    return
+                }
+                
+                let postURL = metadata?.downloadURL()?.absoluteString
+                self.sendDataToDatabase(postImageURL: postURL!)
+            })
+        }
+        else
+        {
+            ProgressHUD.showError("No Image Selected")
+        }
+    }
+    
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
+        
+        cleaner()
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     func sendDataToDatabase(postImageURL : String)
     {
         let dbRef = Config.DB_ROOT_REFERENCE
-        let postRef = dbRef.child("posts")
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        let postRef = dbRef.child("users").child(uid!).child("posts")
         let newPostRef = postRef.child(postRef.childByAutoId().key)
-        newPostRef.setValue(["postImageURL":postImageURL,"description": descriptionTextField.text!]) { (error, ref) in
+        newPostRef.setValue(["postImageURL":postImageURL,"description": descriptionTextField.text!, "currentLocationCoordinates": currentLocationCoordinates, "currentLocationAddress": currentLocationAddress, "postDate": getFormattedDate()]) { (error, ref) in
             
             if error != nil
             {
                 ProgressHUD.showError(error!.localizedDescription)
                 return
             }
-            ProgressHUD.showSuccess("Success")
+            ProgressHUD.showSuccess("Successfully Posted")
             //clearing out the fields
-            self.descriptionTextField.text = ""
-            self.postImageView.image = UIImage(named: "placeholder.jpg")
-            self.selectedPostImage = UIImage(named: "placeholder.jpg")
+            self.cleaner()
+            self.tabBarController?.selectedIndex = 0
         }
         
+    }
+    
+    func getFormattedDate() -> String
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy"
+        let postDate = formatter.string(from: date)
+        return postDate
+    }
+    
+    func cleaner()
+    {
+        self.descriptionTextField.text = ""
+        self.postImageView.image = UIImage(named: "placeholder.jpg")
+        self.selectedPostImage = nil
+        handlePost()
     }
     
     override func didReceiveMemoryWarning() {

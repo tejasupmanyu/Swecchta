@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBg" translatesAutoresizingMaskIntoConstraints="NO" id="alo-SU-Yhy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TejasUpmanyu" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Dk-ROi" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userprofileimage" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Dk-ROi" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
                                 <rect key="frame" x="187" y="66" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="N0e-IV-s26"/>
@@ -48,7 +48,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tejas Upmanyu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-Vr-VDJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uHb-Vr-VDJ">
                                 <rect key="frame" x="8" y="66" width="171" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="cOB-PT-t7Q"/>
@@ -166,6 +166,16 @@
                     <tabBarItem key="tabBarItem" title="" image="icons8-male-user-100" selectedImage="icons8-male-user-filled-100" id="NtI-D4-uyg">
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="BioLabel" destination="gsf-Qs-9Ji" id="qVz-6A-fdD"/>
+                        <outlet property="editDetailsButton" destination="rQr-H1-O7Z" id="VRg-rY-Mo6"/>
+                        <outlet property="logOutButton" destination="Zyi-GS-vag" id="oAf-LQ-GWe"/>
+                        <outlet property="noOfDustbinsIdentifiedLabel" destination="ME5-6U-EU6" id="CW2-CB-xwD"/>
+                        <outlet property="noOfPostsLabel" destination="Ydy-Kr-bmf" id="isA-jA-Jsq"/>
+                        <outlet property="residenceLabel" destination="rVp-cq-XmS" id="jXt-fj-fAR"/>
+                        <outlet property="userNameLabel" destination="uHb-Vr-VDJ" id="krh-Ja-TR8"/>
+                        <outlet property="userProfileImage" destination="h8x-Dk-ROi" id="BnY-IK-Pyi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55O-d4-XMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,8 +184,8 @@
     </scenes>
     <resources>
         <image name="ProfileBg" width="750" height="1334"/>
-        <image name="TejasUpmanyu" width="360" height="360"/>
         <image name="icons8-male-user-100" width="33" height="33"/>
         <image name="icons8-male-user-filled-100" width="33" height="33"/>
+        <image name="userprofileimage" width="341" height="341"/>
     </resources>
 </document>

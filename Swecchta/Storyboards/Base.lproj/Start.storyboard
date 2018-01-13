@@ -288,6 +288,6 @@
         <image name="userprofileimage" width="341" height="341"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tca-Fe-brf"/>
+        <segue reference="cP4-C6-306"/>
     </inferredMetricsTieBreakers>
 </document>

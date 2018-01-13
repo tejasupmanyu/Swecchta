@@ -17,6 +17,7 @@
 		D654527620026E6200F652BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654527520026E6200F652BE /* Main.storyboard */; };
 		D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65452772002AF2900F652BE /* SignUpViewController.swift */; };
 		D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666DF47200552CF0038E0F1 /* ProfileViewController.swift */; };
+		D674579C200928A60071280B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D674579B200928A60071280B /* UserInfo.swift */; };
 		D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887511FFE5DF500C829D3 /* AppDelegate.swift */; };
 		D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69887531FFE5DF500C829D3 /* LoginViewController.swift */; };
 		D69887571FFE5DF500C829D3 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69887551FFE5DF500C829D3 /* Start.storyboard */; };
@@ -29,6 +30,9 @@
 		D6ADA23A20036D5300AFC03F /* CreatePost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23920036D5300AFC03F /* CreatePost.storyboard */; };
 		D6ADA23C20036D6300AFC03F /* LocateDustbin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */; };
 		D6ADA23E20036D7D00AFC03F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6ADA23D20036D7D00AFC03F /* Profile.storyboard */; };
+		D6D3FD782008C90300464793 /* AllPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3FD772008C90300464793 /* AllPostsTableViewCell.swift */; };
+		D6D3FD7A2008C9E500464793 /* AllPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3FD792008C9E500464793 /* AllPostsViewController.swift */; };
+		D6D3FD7D2008D31A00464793 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3FD7C2008D31A00464793 /* Post.swift */; };
 		D6D7CA7C20054386000A6808 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7CA7B20054386000A6808 /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,7 @@
 		D654527520026E6200F652BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D65452772002AF2900F652BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D666DF47200552CF0038E0F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D674579B200928A60071280B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		D698874E1FFE5DF500C829D3 /* Swecchta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swecchta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69887511FFE5DF500C829D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69887531FFE5DF500C829D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +67,9 @@
 		D6ADA23920036D5300AFC03F /* CreatePost.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePost.storyboard; sourceTree = "<group>"; };
 		D6ADA23B20036D6300AFC03F /* LocateDustbin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocateDustbin.storyboard; sourceTree = "<group>"; };
 		D6ADA23D20036D7D00AFC03F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		D6D3FD772008C90300464793 /* AllPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsTableViewCell.swift; sourceTree = "<group>"; };
+		D6D3FD792008C9E500464793 /* AllPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewController.swift; sourceTree = "<group>"; };
+		D6D3FD7C2008D31A00464793 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D6D7CA7B20054386000A6808 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,8 @@
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
 				D63154302006579B00CCCE90 /* AuthServices.swift */,
 				D63154322006674700CCCE90 /* Config.swift */,
+				D674579B200928A60071280B /* UserInfo.swift */,
+				D6D3FD7B2008D30B00464793 /* Model */,
 				D6D7CA7B20054386000A6808 /* RoundImageView.swift */,
 				D631543620069CF300CCCE90 /* RoundButton.swift */,
 				D69887581FFE5DF500C829D3 /* Swecchta.xcdatamodeld */,
@@ -107,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
+				D6D3FD772008C90300464793 /* AllPostsTableViewCell.swift */,
+				D6D3FD792008C9E500464793 /* AllPostsViewController.swift */,
 				D65452772002AF2900F652BE /* SignUpViewController.swift */,
 				D666DF47200552CF0038E0F1 /* ProfileViewController.swift */,
 				D63154342006979200CCCE90 /* CreatePostViewController.swift */,
@@ -159,6 +171,14 @@
 				D698875D1FFE5DF500C829D3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D6D3FD7B2008D30B00464793 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6D3FD7C2008D31A00464793 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F96A6C49FD6B90927AA3A4BC /* Frameworks */ = {
@@ -282,6 +302,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -292,6 +313,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,12 +351,16 @@
 				D63154312006579B00CCCE90 /* AuthServices.swift in Sources */,
 				D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */,
 				D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */,
+				D6D3FD7D2008D31A00464793 /* Post.swift in Sources */,
 				D63154332006674700CCCE90 /* Config.swift in Sources */,
 				D6397D592007F4920029B072 /* ProgressHUD.m in Sources */,
+				D6D3FD782008C90300464793 /* AllPostsTableViewCell.swift in Sources */,
 				D631543720069CF300CCCE90 /* RoundButton.swift in Sources */,
 				D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */,
 				D63154352006979200CCCE90 /* CreatePostViewController.swift in Sources */,
 				D698875A1FFE5DF500C829D3 /* Swecchta.xcdatamodeld in Sources */,
+				D674579C200928A60071280B /* UserInfo.swift in Sources */,
+				D6D3FD7A2008C9E500464793 /* AllPostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

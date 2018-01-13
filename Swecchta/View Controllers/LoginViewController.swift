@@ -56,6 +56,7 @@ class LoginViewController: UIViewController{
         view.endEditing(true)
         SwiftSpinner.show("Authenticating")
         AuthServices.signIn(email: emailTextField.text!, password: passTextField.text!, onSuccess: {
+            
             SwiftSpinner.hide()
             self.performSegue(withIdentifier: "SignInToTabBarVC", sender: nil)
             
