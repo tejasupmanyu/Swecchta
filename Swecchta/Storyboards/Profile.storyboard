@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBg" translatesAutoresizingMaskIntoConstraints="NO" id="alo-SU-Yhy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userprofileimage" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Dk-ROi" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userprofileimage" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Dk-ROi" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
                                 <rect key="frame" x="187" y="66" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="N0e-IV-s26"/>

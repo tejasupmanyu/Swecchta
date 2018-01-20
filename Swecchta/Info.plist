@@ -61,5 +61,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Swecchta Requires Your Location To Geotag Images</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Swecchta Requires Access To Camera For Getting Images</string>
 </dict>
 </plist>

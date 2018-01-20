@@ -119,6 +119,7 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
         
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
+        pickerController.allowsEditing = true
         present(pickerController, animated: true, completion: nil)
         
     }
@@ -223,6 +224,7 @@ extension CreatePostViewController : UIImagePickerControllerDelegate, UINavigati
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage
         {
             selectedPostImage = image
+            postImageView.contentMode = .scaleAspectFill
             postImageView.image = selectedPostImage
         }
         dismiss(animated: true, completion: nil)

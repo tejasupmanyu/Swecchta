@@ -56,7 +56,7 @@ class LoginViewController: UIViewController{
         view.endEditing(true)
         SwiftSpinner.show("Authenticating")
         AuthServices.signIn(email: emailTextField.text!, password: passTextField.text!, onSuccess: {
-            
+            self.downloadUserProfile()
             SwiftSpinner.hide()
             self.performSegue(withIdentifier: "SignInToTabBarVC", sender: nil)
             
@@ -68,6 +68,37 @@ class LoginViewController: UIViewController{
         }
         
         
+    }
+    
+    
+    func downloadUserProfile()
+    {
+        if let uid = FIRAuth.auth()?.currentUser?.uid
+        {
+            let defaults = UserDefaults.standard
+            Config.DB_ROOT_REFERENCE.child("users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
+                if let dict = snapshot.value as? [String : Any]
+                {
+                    
+                    UserInfo.userProfileImageURL = dict["profile_Image_URLString"] as? String
+                    UserInfo.userName = dict["user_name"] as? String
+                    
+                    defaults.set(dict["user_name"], forKey: "userName")
+                    defaults.set(dict["profile_Image_URLString"], forKey:"userProfileImageURL")
+                    
+                    UserInfo.userProfileImageView?.sd_setImage(with: URL(string: defaults.value(forKey: "userProfileImageURL") as! String))
+                    defaults.set(UserInfo.userProfileImageView?.image, forKey: "userProfileImage")
+                }
+            
+                else
+                {
+                    UserInfo.userProfileImageView?.image = #imageLiteral(resourceName: "userprofileimage")
+                    defaults.set(UserInfo.userProfileImageView?.image, forKey: "userProfileImage")
+                    UserInfo.userName = "User"
+                    defaults.set("User", forKey: "userName")
+                }
+            }
+        }
     }
     
     // touching anywhere else on the screen except keyboard makes It give up Its first Responder Status

@@ -19,4 +19,10 @@ target 'Swecchta' do
 
 	pod "SwiftSpinner"
     	pod 'SDWebImage', '~> 4.0'
+
+	pod 'GoogleMaps'
+  	pod 'GooglePlaces'
+	pod 'GooglePlacePicker'
+
+	
 end

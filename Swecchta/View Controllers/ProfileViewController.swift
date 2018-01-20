@@ -28,28 +28,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let uid = UserInfo.uid
+        if FIRAuth.auth()?.currentUser != nil
         {
-            userProfileImage.downloadImage(from: UserInfo.userProfileImageURL!)
-            
-            if let userName = UserInfo.userName
-            {
-                userNameLabel.text = userName
-            }
-            else
-            {
-                userNameLabel.text = "User"
-            }
-            
+            userProfileImage.sd_setImage(with: URL(string : UserInfo.userProfileImageURL!), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
+            userNameLabel.text = User.getUserName()
             logOutButton.setTitle("Not \(userNameLabel.text ?? "You")? Log Out.", for: .normal)
-        
         }
-        
-        
     }
     
     
@@ -61,7 +50,7 @@ class ProfileViewController: UIViewController {
             print(logOutError.localizedDescription)
             print("Error Logging Out!")
         }
-        
+        User.clearUserDefaults()
         let storyboard = UIStoryboard(name: "Start", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
         self.present(signInVC, animated: true, completion: nil)

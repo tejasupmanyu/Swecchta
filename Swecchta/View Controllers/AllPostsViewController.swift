@@ -26,9 +26,8 @@ class AllPostsViewController: UIViewController {
     var posts = [Post]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         downloadUserProfile()
+        // Do any additional setup after loading the view.
         EmptyView.isHidden = true
         tableView.dataSource = self
         tableView.delegate = self
@@ -39,27 +38,33 @@ class AllPostsViewController: UIViewController {
         super.viewWillAppear(animated)
         loadMyPosts()
         tableView.reloadData()
+        ProgressHUD.showSuccess()
     }
     
     func downloadUserProfile()
     {
         if let uid = FIRAuth.auth()?.currentUser?.uid
         {
+            let defaults = UserDefaults.standard
             Config.DB_ROOT_REFERENCE.child("users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
                 if let dict = snapshot.value as? [String : Any]
                 {
                     
                     UserInfo.userProfileImageURL = dict["profile_Image_URLString"] as? String
+                    //print("Ye hai url - \(UserInfo.userProfileImageURL!)")
                     UserInfo.userName = dict["user_name"] as? String
+                    
+                    defaults.set(dict["user_name"], forKey: "userName")
+                    defaults.set(dict["profile_Image_URLString"], forKey:"userProfileImageURL")
+                    
+                    UserInfo.userProfileImageView?.sd_setImage(with: URL(string: UserInfo.userProfileImageURL!))
                 }
-                
-                if let profileImageURL = UserInfo.userProfileImageURL
-                {
-                    UserInfo.userProfileImageView?.sd_setImage(with: URL(string : profileImageURL), placeholderImage: #imageLiteral(resourceName: "placeholder"))
-                }
+                    
                 else
                 {
                     UserInfo.userProfileImageView?.image = #imageLiteral(resourceName: "userprofileimage")
+                    UserInfo.userName = "User"
+                    defaults.set("User", forKey: "userName")
                 }
             }
         }
@@ -69,12 +74,13 @@ class AllPostsViewController: UIViewController {
     {
         
        //posts.removeAll()
+       ProgressHUD.show("Loading Posts...", interaction: false)
         Config.DB_ROOT_REFERENCE.child("users").child(UserInfo.uid!).child("posts").queryOrderedByKey().observe(.value) { (snapshot) in
             
             self.posts = [Post]()
             if let allPosts = snapshot.value as? [String: AnyObject]
             {
-                print(allPosts)
+                
                 if allPosts.count == 0
                 {
                     self.EmptyView.isHidden = false
@@ -142,14 +148,13 @@ extension AllPostsViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as!  AllPostsTableViewCell
         
-        cell.UserProfileImage.downloadImage(from: UserInfo.userProfileImageURL!)
+        cell.UserProfileImage.sd_setImage(with: URL(string : UserDefaults.standard.string(forKey: "userProfileImageURL")!), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
         cell.postImageView.sd_showActivityIndicatorView()
         cell.postImageView.sd_setIndicatorStyle(.whiteLarge)
         cell.postImageView.sd_setImage(with: URL(string: self.posts[indexPath.section].postImageURL!), placeholderImage: UIImage(named:"placeholder"), options: [.progressiveDownload,.continueInBackground,.scaleDownLargeImages,])
         cell.addressLabel.text = self.posts[indexPath.section].currentLocationAddress
         cell.coordinatesLabel.text = self.posts[indexPath.section].currentLocationCoordinates
         cell.postDescriptionLabel.text = self.posts[indexPath.section].description
-        
         return cell
     }
 }

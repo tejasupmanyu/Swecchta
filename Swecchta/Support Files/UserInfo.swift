@@ -11,6 +11,7 @@ import Firebase
 
 struct UserInfo
 {
+    
     static var uid = FIRAuth.auth()?.currentUser?.uid
     static var userName : String?
     static var userProfileImageURL : String?

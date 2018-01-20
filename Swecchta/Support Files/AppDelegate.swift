@@ -10,12 +10,17 @@ import UIKit
 import FBSDKCoreKit
 import Firebase
 import CoreData
+import GoogleMaps
+import GooglePlaces
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    // AIzaSyCb_29vu_Wz19B6NHY4NzibjT3SWi4vtwQ GMaps SDK Key
+    // AIzaSyDvQdJrKdxAEv1bnG_ePIcuriS1eHZX5p8 Places Key
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -38,7 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = InitialVC
             self.window?.makeKeyAndVisible()
         }
-      
+        
+        // provide keys to Google API services
+        GMSServices.provideAPIKey("AIzaSyCb_29vu_Wz19B6NHY4NzibjT3SWi4vtwQ")
+        GMSPlacesClient.provideAPIKey("AIzaSyDvQdJrKdxAEv1bnG_ePIcuriS1eHZX5p8")
+        
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
         return true
     }
     
@@ -50,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled;
     }
 
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
