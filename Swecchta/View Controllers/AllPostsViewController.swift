@@ -20,7 +20,7 @@ class AllPostsViewController: UIViewController {
     static var profileImageURLString : String?
     static var user_Name : String?
     static var User_Profile_Image = UIImage(named: "userProfileImage.jpg")
-    
+    static var postCount : Int?
     
     
     var posts = [Post]()
@@ -128,6 +128,7 @@ extension AllPostsViewController : UITableViewDelegate, UITableViewDataSource
         return 340.0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
+        AllPostsViewController.postCount = posts.count
         return posts.count
     }
     

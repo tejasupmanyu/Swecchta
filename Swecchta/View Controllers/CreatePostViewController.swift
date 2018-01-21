@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import CoreLocation
+import GoogleMaps
+import GooglePlaces
 import SwiftSpinner
 
 class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
@@ -17,6 +19,7 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
     var currentLocationCoordinates : String?
     var currentLocationAddress : String?
     let locationManager = CLLocationManager()
+    var placesClient: GMSPlacesClient!
     
     @IBOutlet weak var postImageView: UIImageView!
     
@@ -41,6 +44,7 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+            placesClient = GMSPlacesClient.shared()
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CreatePostViewController.handleSelectPostImageView))
@@ -63,35 +67,26 @@ class CreatePostViewController: UIViewController, CLLocationManagerDelegate{
         if let location = locations.first
         {
             currentLocationCoordinates = "\(location.coordinate.latitude), \(location.coordinate.longitude)"
-            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+            // Google Places Used
+            placesClient.currentPlace(callback: { (placelikelihoods, error) in
+                
                 if error != nil
                 {
-                    print("Error in reverse Geocoding!!")
+                    print("current Place Error! : \(error?.localizedDescription ?? "")")
                     return
                 }
                 
-                if let pm = placemarks?[0]
+                if let likelihoodPlace = placelikelihoods?.likelihoods.first
                 {
-                    self.displayLocationInfo(placemark: pm)
-                }
-                else
-                {
-                    print("problem with location data recieved")
+                    self.locationManager.stopUpdatingLocation()
+                    let place = likelihoodPlace.place
+                    self.currentLocationAddress = place.formattedAddress!
+                    self.locationLabel.text = self.currentLocationAddress
                 }
             })
         }
     }
     
-    
-    // prints addresses
-    func displayLocationInfo(placemark : CLPlacemark)
-    {
-        locationManager.stopUpdatingLocation()
-        print(placemark.thoroughfare ?? placemark.locality ?? "")
-        print(placemark.subThoroughfare ?? placemark.subLocality ?? "")
-        locationLabel.text = "\(placemark.subThoroughfare ?? "") \(placemark.thoroughfare ?? "") \(placemark.locality ?? "") \(placemark.administrativeArea ?? "")"
-        currentLocationAddress = locationLabel.text!
-    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.denied
@@ -224,7 +219,6 @@ extension CreatePostViewController : UIImagePickerControllerDelegate, UINavigati
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage
         {
             selectedPostImage = image
-            postImageView.contentMode = .scaleAspectFill
             postImageView.image = selectedPostImage
         }
         dismiss(animated: true, completion: nil)

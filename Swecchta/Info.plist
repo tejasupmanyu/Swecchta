@@ -63,5 +63,7 @@
 	<string>Swecchta Requires Your Location To Geotag Images</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Swecchta Requires Access To Camera For Getting Images</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

@@ -55,7 +55,7 @@
         <scene sceneID="uGh-Hh-hvp">
             <objects>
                 <viewControllerPlaceholder storyboardName="CreatePost" id="nWF-f6-cMG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qlt-c5-Jlr"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="icons8-trash-can-filled-100" id="Qlt-c5-Jlr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqg-18-YvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,4 +82,7 @@
             <point key="canvasLocation" x="1785" y="424"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-trash-can-filled-100" width="33" height="33"/>
+    </resources>
 </document>

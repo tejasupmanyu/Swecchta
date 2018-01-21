@@ -18,10 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LocateBg" translatesAutoresizingMaskIntoConstraints="NO" id="pT6-i4-jga">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocateBg" translatesAutoresizingMaskIntoConstraints="NO" id="pT6-i4-jga">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dustbin Locator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fex-VN-p3H">
+                                <rect key="frame" x="8" y="72" width="304" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="mfy-zY-Ay2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="52"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-0x-Xoj">
                                 <rect key="frame" x="20" y="239" width="280" height="90"/>
                                 <subviews>
@@ -72,7 +80,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="JIM-Ld-h9v" kind="show" id="kMw-PB-gqh"/>
+                                            <segue destination="dtr-wZ-aKn" kind="show" id="2lu-R9-nBc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -80,13 +88,27 @@
                                     <constraint firstAttribute="height" constant="90" id="9bP-IW-9t6"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volunteer for a cleaner India, Help us out by Identifying more public dustbins." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="47z-3z-0g2">
+                                <rect key="frame" x="0.0" y="134" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="top" secondItem="z22-Me-616" secondAttribute="top" id="2uK-8v-ASr"/>
+                            <constraint firstItem="yQO-K7-PCT" firstAttribute="trailing" secondItem="Fex-VN-p3H" secondAttribute="trailing" constant="8" id="Bpd-aN-kLX"/>
                             <constraint firstItem="TiC-0x-Xoj" firstAttribute="centerY" secondItem="z22-Me-616" secondAttribute="centerY" id="Hcj-xF-OQC"/>
+                            <constraint firstItem="Fex-VN-p3H" firstAttribute="top" secondItem="yQO-K7-PCT" secondAttribute="top" constant="8" id="Hl9-Wx-URJ"/>
                             <constraint firstAttribute="trailing" secondItem="TiC-0x-Xoj" secondAttribute="trailing" constant="20" id="PuI-wo-ExS"/>
                             <constraint firstItem="TiC-0x-Xoj" firstAttribute="centerX" secondItem="z22-Me-616" secondAttribute="centerX" id="ZNo-yd-Xec"/>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="leading" secondItem="yQO-K7-PCT" secondAttribute="leading" id="gia-Xb-K2S"/>
                             <constraint firstItem="TiC-0x-Xoj" firstAttribute="leading" secondItem="z22-Me-616" secondAttribute="leading" constant="20" id="hp4-sU-jTA"/>
+                            <constraint firstItem="Fex-VN-p3H" firstAttribute="leading" secondItem="yQO-K7-PCT" secondAttribute="leading" constant="8" id="i5J-Sb-YdD"/>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="trailing" secondItem="yQO-K7-PCT" secondAttribute="trailing" id="pGC-Qq-MZ0"/>
+                            <constraint firstItem="pT6-i4-jga" firstAttribute="bottom" secondItem="yQO-K7-PCT" secondAttribute="bottom" id="pca-Q8-XBu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yQO-K7-PCT"/>
                     </view>
@@ -94,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e38-bw-cyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="599.55022488755628"/>
+            <point key="canvasLocation" x="2827.5" y="598.94366197183103"/>
         </scene>
         <!--Identify Dustbin View Controller-->
         <scene sceneID="r0Y-6k-yA3">
@@ -109,7 +131,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKv-R3-Yol" customClass="RoundButton" customModule="Swecchta" customModuleProvider="target">
-                                <rect key="frame" x="16" y="506" width="288" height="40"/>
+                                <rect key="frame" x="16" y="509" width="288" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="O8l-tQ-VZ9"/>
                                 </constraints>
@@ -139,7 +161,7 @@
                             <constraint firstItem="pB1-YY-aC8" firstAttribute="trailing" secondItem="SKv-R3-Yol" secondAttribute="trailing" constant="16" id="JnQ-QZ-SvJ"/>
                             <constraint firstItem="yty-rz-oAT" firstAttribute="top" secondItem="pB1-YY-aC8" secondAttribute="top" id="hgp-A3-VXg"/>
                             <constraint firstItem="SKv-R3-Yol" firstAttribute="leading" secondItem="pB1-YY-aC8" secondAttribute="leading" constant="16" id="pzb-mI-MKu"/>
-                            <constraint firstItem="pB1-YY-aC8" firstAttribute="bottom" secondItem="SKv-R3-Yol" secondAttribute="bottom" constant="22" id="t9d-YD-6GN"/>
+                            <constraint firstItem="pB1-YY-aC8" firstAttribute="bottom" secondItem="SKv-R3-Yol" secondAttribute="bottom" constant="19" id="t9d-YD-6GN"/>
                             <constraint firstItem="yty-rz-oAT" firstAttribute="leading" secondItem="pB1-YY-aC8" secondAttribute="leading" id="x0F-cl-i8O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pB1-YY-aC8"/>
@@ -165,7 +187,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocateBg" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Xv-c3O">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-Vi-qek" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-Vi-qek" customClass="RoundImageView" customModule="Swecchta" customModuleProvider="target">
                                 <rect key="frame" x="16" y="72" width="288" height="221"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="uAa-6I-6mo"/>
@@ -256,21 +278,6 @@
             </objects>
             <point key="canvasLocation" x="5055" y="301.05633802816902"/>
         </scene>
-        <!--Locate Dustbin View Controller-->
-        <scene sceneID="btW-rL-19O">
-            <objects>
-                <viewController id="JIM-Ld-h9v" customClass="LocateDustbinViewController" customModule="Swecchta" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DXC-lp-nkX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JWA-xu-QDD"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nEf-HM-MYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4012" y="984"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oRq-Lw-ITb">
             <objects>
@@ -291,6 +298,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nn1-2o-YA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1937" y="600"/>
+        </scene>
+        <!--Locate Dustbin View Controller-->
+        <scene sceneID="WvM-Ha-zsZ">
+            <objects>
+                <viewController id="dtr-wZ-aKn" customClass="LocateDustbinViewController" customModule="Swecchta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNv-ZR-rWz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8S-ao-oKB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGO-jQ-7uf" customClass="RoundButton" customModule="Swecchta" customModuleProvider="target">
+                                <rect key="frame" x="16" y="506" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h8r-aD-ZYz"/>
+                                </constraints>
+                                <state key="normal" title="Navigate" backgroundImage="Ohhappiness">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r8S-ao-oKB" firstAttribute="top" secondItem="UcP-CR-3SU" secondAttribute="top" id="DaR-Qr-BhB"/>
+                            <constraint firstItem="r8S-ao-oKB" firstAttribute="bottom" secondItem="UcP-CR-3SU" secondAttribute="bottom" constant="-63" id="I6o-PI-IqE"/>
+                            <constraint firstItem="AGO-jQ-7uf" firstAttribute="leading" secondItem="UcP-CR-3SU" secondAttribute="leading" constant="16" id="Iap-gb-Je4"/>
+                            <constraint firstItem="r8S-ao-oKB" firstAttribute="leading" secondItem="UcP-CR-3SU" secondAttribute="leading" id="NiQ-dy-B9M"/>
+                            <constraint firstItem="UcP-CR-3SU" firstAttribute="trailing" secondItem="AGO-jQ-7uf" secondAttribute="trailing" constant="16" id="dOa-HQ-AIu"/>
+                            <constraint firstItem="r8S-ao-oKB" firstAttribute="trailing" secondItem="UcP-CR-3SU" secondAttribute="trailing" id="hqy-XY-BM9"/>
+                            <constraint firstItem="UcP-CR-3SU" firstAttribute="bottom" secondItem="AGO-jQ-7uf" secondAttribute="bottom" constant="22" id="kzQ-gi-Cw4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UcP-CR-3SU"/>
+                    </view>
+                    <connections>
+                        <outlet property="NavigateButton" destination="AGO-jQ-7uf" id="fS0-uG-VhL"/>
+                        <outlet property="mapContainerView" destination="r8S-ao-oKB" id="6Ty-ap-gzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-yH-ztI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4009" y="1035"/>
         </scene>
     </scenes>
     <resources>

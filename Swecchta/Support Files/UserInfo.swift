@@ -16,6 +16,7 @@ struct UserInfo
     static var userName : String?
     static var userProfileImageURL : String?
     static var userProfileImageView : UIImageView?
+    static var residence : String?
 }
 
 

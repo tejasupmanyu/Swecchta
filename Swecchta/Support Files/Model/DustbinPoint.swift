@@ -12,8 +12,11 @@ import CoreLocation
 class DustbinPoint
 {
     var dbinImageURL : String?
-    var coordinates : String?
+    var coordinatesString : String?
+    
     var address : String?
     var Identified_date : String?
     var identifiedByUID : String?
+    
+    var coordinates : CLLocationCoordinate2D?
 }

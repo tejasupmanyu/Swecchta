@@ -10,9 +10,11 @@ import UIKit
 import Firebase
 import SwiftSpinner
 
+
 class SignUpViewController: UIViewController {
     
     var selectedProfileImage : UIImage?
+  
     
     @IBOutlet weak var ProfileImageView: UIImageView!
     
@@ -33,6 +35,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         ProfileImageView.layer.cornerRadius = ProfileImageView.bounds.height * 0.5
+        
         
         
         nameTextField.attributedPlaceholder = NSAttributedString(string: nameTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor(white: 1.0, alpha: 0.7)])
@@ -133,5 +136,4 @@ extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationCo
     }
     
 }
-
 

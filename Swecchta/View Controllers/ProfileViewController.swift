@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
         {
             userProfileImage.sd_setImage(with: URL(string : UserInfo.userProfileImageURL!), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
             userNameLabel.text = User.getUserName()
+            noOfPostsLabel.text = "\(AllPostsViewController.postCount ?? 0) Posts"
             logOutButton.setTitle("Not \(userNameLabel.text ?? "You")? Log Out.", for: .normal)
         }
     }

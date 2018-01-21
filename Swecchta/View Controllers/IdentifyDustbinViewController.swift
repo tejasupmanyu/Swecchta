@@ -117,22 +117,6 @@ extension IdentifyDustbinViewController : CLLocationManagerDelegate
                 mapView.animate(to: camera)
             }
 
-//            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
-//                if error != nil
-//                {
-//                    print("Error in reverse Geocoding!!")
-//                    return
-//                }
-//
-//                if let pm = placemarks?[0]
-//                {
-//                    self.displayLocationInfo(placemark: pm)
-//                }
-//                else
-//                {
-//                    print("problem with location data recieved")
-//                }
-//            })
             // address using Google Places API
             
             placesClient.currentPlace(callback: { (placelikelihoods, error) in
@@ -147,20 +131,10 @@ extension IdentifyDustbinViewController : CLLocationManagerDelegate
                 {
                     let place = likelihoodPlace.place
                     self.currentLocationAddress = place.formattedAddress!
-                    print("Address from Places API is \(place.formattedAddress!)")
                 }
             })
         }
     }
-    
-//    func displayLocationInfo(placemark : CLPlacemark)
-//    {
-//        locationManager.stopUpdatingLocation()
-//        print(placemark.thoroughfare ?? placemark.locality ?? "")
-//        print(placemark.subThoroughfare ?? placemark.subLocality ?? "")
-//        currentLocationAddress = "\(placemark.subThoroughfare ?? "") \(placemark.thoroughfare ?? "") \(placemark.locality ?? "") \(placemark.administrativeArea ?? "")"
-//    }
-//
     
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

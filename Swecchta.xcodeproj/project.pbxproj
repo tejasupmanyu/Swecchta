@@ -10,6 +10,28 @@
 		6B61EE41A2C68EFFFC4C9989 /* Pods_Swecchta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F91726A267286FE1B5EA092 /* Pods_Swecchta.framework */; };
 		D600E8E4200FD542007C812A /* IdentifyDustbinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600E8E3200FD542007C812A /* IdentifyDustbinViewController.swift */; };
 		D600E8E6200FD5AA007C812A /* LocateDustbinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600E8E5200FD5AA007C812A /* LocateDustbinViewController.swift */; };
+		D601F85E2014BB7000CF3791 /* MarkerPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F85D2014BB7000CF3791 /* MarkerPopUpView.swift */; };
+		D601F8692014D07100CF3791 /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F85F2014D06E00CF3791 /* PreViewController.swift */; };
+		D601F86A2014D07100CF3791 /* output.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D601F8612014D06F00CF3791 /* output.mp4 */; };
+		D601F86B2014D07100CF3791 /* output3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D601F8622014D06F00CF3791 /* output3.mp4 */; };
+		D601F86C2014D07100CF3791 /* output2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D601F8632014D06F00CF3791 /* output2.mp4 */; };
+		D601F86D2014D07100CF3791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8642014D07000CF3791 /* ViewController.swift */; };
+		D601F86E2014D07100CF3791 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8652014D07000CF3791 /* ContentViewController.swift */; };
+		D601F86F2014D07100CF3791 /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8672014D07100CF3791 /* SegmentedProgressBar.swift */; };
+		D601F8702014D07100CF3791 /* usersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8682014D07100CF3791 /* usersCollectionViewCell.swift */; };
+		D601F8A92015108400CF3791 /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8972015108400CF3791 /* PageContainer.swift */; };
+		D601F8AA2015108400CF3791 /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8992015108400CF3791 /* PageViewItem.swift */; };
+		D601F8AB2015108400CF3791 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F89A2015108400CF3791 /* PageView.swift */; };
+		D601F8AC2015108400CF3791 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F89C2015108400CF3791 /* OnboardingContentView.swift */; };
+		D601F8AD2015108400CF3791 /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F89E2015108400CF3791 /* OnboardingContantViewItem.swift */; };
+		D601F8AE2015108400CF3791 /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F89F2015108400CF3791 /* PaperOnboardingDelegate.swift */; };
+		D601F8AF2015108400CF3791 /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A12015108400CF3791 /* FillAnimationView.swift */; };
+		D601F8B02015108400CF3791 /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A22015108400CF3791 /* PaperOnboardingDataSource.swift */; };
+		D601F8B12015108400CF3791 /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A42015108400CF3791 /* GestureControl.swift */; };
+		D601F8B22015108400CF3791 /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A52015108400CF3791 /* PaperOnboarding.swift */; };
+		D601F8B32015108400CF3791 /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A72015108400CF3791 /* ConstraintsHelper.swift */; };
+		D601F8B42015108400CF3791 /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8A82015108400CF3791 /* Configuring.swift */; };
+		D601F8B6201510C400CF3791 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601F8B5201510C400CF3791 /* CreditsViewController.swift */; };
 		D63154312006579B00CCCE90 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154302006579B00CCCE90 /* AuthServices.swift */; };
 		D63154332006674700CCCE90 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154322006674700CCCE90 /* Config.swift */; };
 		D63154352006979200CCCE90 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63154342006979200CCCE90 /* CreatePostViewController.swift */; };
@@ -65,6 +87,28 @@
 		BD1C19B9C88819EE11824DC1 /* Pods-Swecchta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swecchta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swecchta/Pods-Swecchta.debug.xcconfig"; sourceTree = "<group>"; };
 		D600E8E3200FD542007C812A /* IdentifyDustbinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyDustbinViewController.swift; sourceTree = "<group>"; };
 		D600E8E5200FD5AA007C812A /* LocateDustbinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateDustbinViewController.swift; sourceTree = "<group>"; };
+		D601F85D2014BB7000CF3791 /* MarkerPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerPopUpView.swift; sourceTree = "<group>"; };
+		D601F85F2014D06E00CF3791 /* PreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
+		D601F8612014D06F00CF3791 /* output.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.mp4; sourceTree = "<group>"; };
+		D601F8622014D06F00CF3791 /* output3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output3.mp4; sourceTree = "<group>"; };
+		D601F8632014D06F00CF3791 /* output2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output2.mp4; sourceTree = "<group>"; };
+		D601F8642014D07000CF3791 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D601F8652014D07000CF3791 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		D601F8672014D07100CF3791 /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
+		D601F8682014D07100CF3791 /* usersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = usersCollectionViewCell.swift; sourceTree = "<group>"; };
+		D601F8972015108400CF3791 /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
+		D601F8992015108400CF3791 /* PageViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewItem.swift; sourceTree = "<group>"; };
+		D601F89A2015108400CF3791 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		D601F89C2015108400CF3791 /* OnboardingContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		D601F89E2015108400CF3791 /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		D601F89F2015108400CF3791 /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		D601F8A12015108400CF3791 /* FillAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillAnimationView.swift; sourceTree = "<group>"; };
+		D601F8A22015108400CF3791 /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		D601F8A42015108400CF3791 /* GestureControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureControl.swift; sourceTree = "<group>"; };
+		D601F8A52015108400CF3791 /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
+		D601F8A72015108400CF3791 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		D601F8A82015108400CF3791 /* Configuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuring.swift; sourceTree = "<group>"; };
+		D601F8B5201510C400CF3791 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		D62184AA2007F54100A8A8F0 /* Swecchta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swecchta.entitlements; sourceTree = "<group>"; };
 		D63154302006579B00CCCE90 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		D63154322006674700CCCE90 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -141,6 +185,109 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D601F8602014D06F00CF3791 /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8612014D06F00CF3791 /* output.mp4 */,
+				D601F8622014D06F00CF3791 /* output3.mp4 */,
+				D601F8632014D06F00CF3791 /* output2.mp4 */,
+			);
+			path = videos;
+			sourceTree = "<group>";
+		};
+		D601F8662014D07100CF3791 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8672014D07100CF3791 /* SegmentedProgressBar.swift */,
+				D601F8682014D07100CF3791 /* usersCollectionViewCell.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		D601F8942015108400CF3791 /* PaperOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8952015108400CF3791 /* PageView */,
+				D601F89B2015108400CF3791 /* OnboardingContentView */,
+				D601F89F2015108400CF3791 /* PaperOnboardingDelegate.swift */,
+				D601F8A02015108400CF3791 /* FillAnimationView */,
+				D601F8A22015108400CF3791 /* PaperOnboardingDataSource.swift */,
+				D601F8A32015108400CF3791 /* GestureControl */,
+				D601F8A52015108400CF3791 /* PaperOnboarding.swift */,
+				D601F8A62015108400CF3791 /* Helpers */,
+			);
+			name = PaperOnboarding;
+			path = "../../../../../Downloads/paper-onboarding-master/PaperOnboarding";
+			sourceTree = "<group>";
+		};
+		D601F8952015108400CF3791 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8962015108400CF3791 /* PageContainerView */,
+				D601F8982015108400CF3791 /* Item */,
+				D601F89A2015108400CF3791 /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		D601F8962015108400CF3791 /* PageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8972015108400CF3791 /* PageContainer.swift */,
+			);
+			path = PageContainerView;
+			sourceTree = "<group>";
+		};
+		D601F8982015108400CF3791 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8992015108400CF3791 /* PageViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D601F89B2015108400CF3791 /* OnboardingContentView */ = {
+			isa = PBXGroup;
+			children = (
+				D601F89C2015108400CF3791 /* OnboardingContentView.swift */,
+				D601F89D2015108400CF3791 /* Item */,
+			);
+			path = OnboardingContentView;
+			sourceTree = "<group>";
+		};
+		D601F89D2015108400CF3791 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D601F89E2015108400CF3791 /* OnboardingContantViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D601F8A02015108400CF3791 /* FillAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8A12015108400CF3791 /* FillAnimationView.swift */,
+			);
+			path = FillAnimationView;
+			sourceTree = "<group>";
+		};
+		D601F8A32015108400CF3791 /* GestureControl */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8A42015108400CF3791 /* GestureControl.swift */,
+			);
+			path = GestureControl;
+			sourceTree = "<group>";
+		};
+		D601F8A62015108400CF3791 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D601F8A72015108400CF3791 /* ConstraintsHelper.swift */,
+				D601F8A82015108400CF3791 /* Configuring.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D64E9A9720139B820050C3AB /* IQKeyboardManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +356,7 @@
 		D68DFF972007596E0031813C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				D601F8942015108400CF3791 /* PaperOnboarding */,
 				D64E9A9720139B820050C3AB /* IQKeyboardManagerSwift */,
 				D69887511FFE5DF500C829D3 /* AppDelegate.swift */,
 				D63154302006579B00CCCE90 /* AuthServices.swift */,
@@ -232,6 +380,7 @@
 			children = (
 				D69887531FFE5DF500C829D3 /* LoginViewController.swift */,
 				D65452772002AF2900F652BE /* SignUpViewController.swift */,
+				D601F8B5201510C400CF3791 /* CreditsViewController.swift */,
 				D6D3FD772008C90300464793 /* AllPostsTableViewCell.swift */,
 				D6D3FD792008C9E500464793 /* AllPostsViewController.swift */,
 				D666DF47200552CF0038E0F1 /* ProfileViewController.swift */,
@@ -239,6 +388,7 @@
 				D600E8E3200FD542007C812A /* IdentifyDustbinViewController.swift */,
 				D6419A5B20108D1A0097A80B /* ConfirmIdentifiedDustbinViewController.swift */,
 				D600E8E5200FD5AA007C812A /* LocateDustbinViewController.swift */,
+				D601F85D2014BB7000CF3791 /* MarkerPopUpView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -264,6 +414,11 @@
 		D69887501FFE5DF500C829D3 /* Swecchta */ = {
 			isa = PBXGroup;
 			children = (
+				D601F8662014D07100CF3791 /* class */,
+				D601F8652014D07000CF3791 /* ContentViewController.swift */,
+				D601F85F2014D06E00CF3791 /* PreViewController.swift */,
+				D601F8602014D06F00CF3791 /* videos */,
+				D601F8642014D07000CF3791 /* ViewController.swift */,
 				D62184AA2007F54100A8A8F0 /* Swecchta.entitlements */,
 				D69887661FFE80E500C829D3 /* GoogleService-Info.plist */,
 				D69887601FFE5DF500C829D3 /* Info.plist */,
@@ -378,9 +533,12 @@
 			files = (
 				D6397D5A2007F4920029B072 /* ProgressHUD.bundle in Resources */,
 				D698875F1FFE5DF500C829D3 /* LaunchScreen.storyboard in Resources */,
+				D601F86C2014D07100CF3791 /* output2.mp4 in Resources */,
+				D601F86B2014D07100CF3791 /* output3.mp4 in Resources */,
 				D64E9AB720139B820050C3AB /* IQKeyboardManager.bundle in Resources */,
 				D654527620026E6200F652BE /* Main.storyboard in Resources */,
 				D6ADA23E20036D7D00AFC03F /* Profile.storyboard in Resources */,
+				D601F86A2014D07100CF3791 /* output.mp4 in Resources */,
 				D69887671FFE80E500C829D3 /* GoogleService-Info.plist in Resources */,
 				D698875C1FFE5DF500C829D3 /* Assets.xcassets in Resources */,
 				D6ADA23820036D3900AFC03F /* Inbox.storyboard in Resources */,
@@ -471,19 +629,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D601F8AF2015108400CF3791 /* FillAnimationView.swift in Sources */,
 				D666DF48200552CF0038E0F1 /* ProfileViewController.swift in Sources */,
+				D601F8702014D07100CF3791 /* usersCollectionViewCell.swift in Sources */,
+				D601F86E2014D07100CF3791 /* ContentViewController.swift in Sources */,
 				D6D7CA7C20054386000A6808 /* RoundImageView.swift in Sources */,
 				D600E8E4200FD542007C812A /* IdentifyDustbinViewController.swift in Sources */,
 				D64E9ABC20139B820050C3AB /* IQUIViewController+Additions.swift in Sources */,
+				D601F8B12015108400CF3791 /* GestureControl.swift in Sources */,
+				D601F8692014D07100CF3791 /* PreViewController.swift in Sources */,
 				D63154312006579B00CCCE90 /* AuthServices.swift in Sources */,
 				D64E9AB820139B820050C3AB /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				D64E9ABD20139B820050C3AB /* IQUITextFieldView+Additions.swift in Sources */,
+				D601F8A92015108400CF3791 /* PageContainer.swift in Sources */,
+				D601F8B42015108400CF3791 /* Configuring.swift in Sources */,
 				D64E9ABB20139B820050C3AB /* IQUIScrollView+Additions.swift in Sources */,
+				D601F8AE2015108400CF3791 /* PaperOnboardingDelegate.swift in Sources */,
 				D64E9ABF20139B820050C3AB /* IQNSArray+Sort.swift in Sources */,
+				D601F8B32015108400CF3791 /* ConstraintsHelper.swift in Sources */,
 				D69887541FFE5DF500C829D3 /* LoginViewController.swift in Sources */,
 				D64E9AB920139B820050C3AB /* IQKeyboardManager.swift in Sources */,
 				D69887521FFE5DF500C829D3 /* AppDelegate.swift in Sources */,
 				D64E9AB020139B820050C3AB /* IQPreviousNextView.swift in Sources */,
+				D601F85E2014BB7000CF3791 /* MarkerPopUpView.swift in Sources */,
 				D6D3FD7D2008D31A00464793 /* Post.swift in Sources */,
 				D64E9AB620139B820050C3AB /* IQKeyboardManagerConstants.swift in Sources */,
 				D63154332006674700CCCE90 /* Config.swift in Sources */,
@@ -491,15 +659,23 @@
 				D64E9AB120139B820050C3AB /* IQTitleBarButtonItem.swift in Sources */,
 				D6419A5C20108D1A0097A80B /* ConfirmIdentifiedDustbinViewController.swift in Sources */,
 				D64E9ABE20139B820050C3AB /* IQUIView+Hierarchy.swift in Sources */,
+				D601F8AB2015108400CF3791 /* PageView.swift in Sources */,
 				D6A6B3992010DE5300264354 /* LocationAddress.swift in Sources */,
+				D601F8B02015108400CF3791 /* PaperOnboardingDataSource.swift in Sources */,
 				D64E9AB320139B820050C3AB /* IQToolbar.swift in Sources */,
 				D6397D592007F4920029B072 /* ProgressHUD.m in Sources */,
 				D6D3FD782008C90300464793 /* AllPostsTableViewCell.swift in Sources */,
+				D601F8AD2015108400CF3791 /* OnboardingContantViewItem.swift in Sources */,
 				D64E9ABA20139B820050C3AB /* IQUIWindow+Hierarchy.swift in Sources */,
 				D631543720069CF300CCCE90 /* RoundButton.swift in Sources */,
 				D65452782002AF2A00F652BE /* SignUpViewController.swift in Sources */,
 				D64E9AB420139B820050C3AB /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				D601F86D2014D07100CF3791 /* ViewController.swift in Sources */,
+				D601F8AA2015108400CF3791 /* PageViewItem.swift in Sources */,
+				D601F8B6201510C400CF3791 /* CreditsViewController.swift in Sources */,
 				D63154352006979200CCCE90 /* CreatePostViewController.swift in Sources */,
+				D601F8B22015108400CF3791 /* PaperOnboarding.swift in Sources */,
+				D601F8AC2015108400CF3791 /* OnboardingContentView.swift in Sources */,
 				D64E9AC22013BB990050C3AB /* DustbinPoint.swift in Sources */,
 				D64E9AB520139B820050C3AB /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				D64E9AB220139B820050C3AB /* IQBarButtonItem.swift in Sources */,
@@ -508,6 +684,7 @@
 				D674579C200928A60071280B /* UserInfo.swift in Sources */,
 				D6D3FD7A2008C9E500464793 /* AllPostsViewController.swift in Sources */,
 				D64E9AAF20139B820050C3AB /* IQTextView.swift in Sources */,
+				D601F86F2014D07100CF3791 /* SegmentedProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

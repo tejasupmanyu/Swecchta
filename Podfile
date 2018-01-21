@@ -25,4 +25,6 @@ target 'Swecchta' do
 	pod 'GooglePlacePicker'
 
 	
+
+	
 end

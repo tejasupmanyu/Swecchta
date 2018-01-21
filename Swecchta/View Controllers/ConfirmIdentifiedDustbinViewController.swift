@@ -109,7 +109,7 @@ class ConfirmIdentifiedDustbinViewController: UIViewController {
             ProgressHUD.showSuccess("Successfully Posted")
             //clearing out the fields
             self.cleaner()
-            self.tabBarController?.selectedIndex = 3
+            self.navigationController?.popToRootViewController(animated: true)
         }
         
     }
