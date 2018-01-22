@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var logOutButton: UIButton!
     
-    
+    var dbinCount : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,17 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         if FIRAuth.auth()?.currentUser != nil
         {
+            let uid = FIRAuth.auth()?.currentUser?.uid
+            
             userProfileImage.sd_setImage(with: URL(string : UserInfo.userProfileImageURL!), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
             userNameLabel.text = User.getUserName()
             noOfPostsLabel.text = "\(AllPostsViewController.postCount ?? 0) Posts"
             logOutButton.setTitle("Not \(userNameLabel.text ?? "You")? Log Out.", for: .normal)
+            Config.DB_ROOT_REFERENCE.child("users").child(uid!).child("dustbins_Identified").observe(.value, with: { (snapshot) in
+                self.dbinCount = Int(snapshot.childrenCount)
+                self.noOfDustbinsIdentifiedLabel.text = "\(self.dbinCount ?? 0) Dustbins Identified"
+            })
+            
         }
     }
     

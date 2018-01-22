@@ -14,6 +14,7 @@ class ConfirmIdentifiedDustbinViewController: UIViewController {
     var recievedLocation : LocationAddress?
     var snappedImage : UIImage?
     
+    
     @IBOutlet weak var dustbinImage: RoundImageView!
     
     @IBOutlet weak var dustbinCoordinates: UILabel!
@@ -113,6 +114,8 @@ class ConfirmIdentifiedDustbinViewController: UIViewController {
         }
         
     }
+    
+    
     
     func getFormattedDate() -> String
     {
