@@ -83,17 +83,13 @@ class LoginViewController: UIViewController{
                     UserInfo.userProfileImageURL = dict["profile_Image_URLString"] as? String
                     UserInfo.userName = dict["user_name"] as? String
                     
-                    defaults.set(dict["user_name"], forKey: "userName")
-                    defaults.set(dict["profile_Image_URLString"], forKey:"userProfileImageURL")
-                    
-                    UserInfo.userProfileImageView?.sd_setImage(with: URL(string: defaults.value(forKey: "userProfileImageURL") as! String))
-                    defaults.set(UserInfo.userProfileImageView?.image, forKey: "userProfileImage")
+                    defaults.set(dict["user_name"] as? String, forKey: "userName")
+                    defaults.set(dict["profile_Image_URLString"] as? String, forKey:"userProfileImageURL")
+                    defaults.synchronize()
                 }
             
                 else
                 {
-                    UserInfo.userProfileImageView?.image = #imageLiteral(resourceName: "userprofileimage")
-                    defaults.set(UserInfo.userProfileImageView?.image, forKey: "userProfileImage")
                     UserInfo.userName = "User"
                     defaults.set("User", forKey: "userName")
                 }

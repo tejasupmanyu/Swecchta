@@ -174,26 +174,10 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="EmptyView" destination="jSx-zP-3ga" id="cPf-kt-jLh"/>
                         <outlet property="tableView" destination="6zy-mb-dra" id="CIc-rB-7tz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZh-0R-NK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view hidden="YES" contentMode="scaleToFill" id="jSx-zP-3ga">
-                    <rect key="frame" x="0.0" y="0.0" width="304" height="513"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Have Uploaded Nothing Yet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-Zm-i7z">
-                            <rect key="frame" x="16" y="33" width="272" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <viewLayoutGuide key="safeArea" id="Thp-u7-hvL"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="-240" y="598.94366197183103"/>
         </scene>
@@ -208,7 +192,7 @@
         <!--Content View Controller-->
         <scene sceneID="PAG-WX-8An">
             <objects>
-                <viewController storyboardIdentifier="ContentView" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ciq-hH-uWu" customClass="ContentViewController" customModule="InstagramStories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentView" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ciq-hH-uWu" customClass="ContentViewController" customModule="Swecchta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HJ1-eN-gCo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +207,7 @@
         <!--Pre View Controller-->
         <scene sceneID="qhY-bf-U0O">
             <objects>
-                <viewController storyboardIdentifier="PreView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGg-2z-AV5" customClass="PreViewController" customModule="InstagramStories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGg-2z-AV5" customClass="PreViewController" customModule="Swecchta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cLe-bw-k55">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,7 +307,7 @@
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="kVE-JU-rGk" customClass="usersCollectionViewCell" customModule="InstagramStories" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="kVE-JU-rGk" customClass="usersCollectionViewCell" customModule="Swecchta" customModuleProvider="target">
                                         <rect key="frame" x="8" y="7.5" width="75" height="85"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -374,6 +358,7 @@
                             <constraint firstItem="GYg-QW-E5t" firstAttribute="top" secondItem="Ict-ty-2iW" secondAttribute="top" id="fNf-qY-RwT"/>
                             <constraint firstAttribute="trailing" secondItem="GYg-QW-E5t" secondAttribute="trailing" id="rpb-vr-9EA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="PK8-nO-AEJ"/>
                     </view>
                     <connections>
                         <outlet property="usersCollectionView" destination="GYg-QW-E5t" id="Nbj-j5-RaN"/>

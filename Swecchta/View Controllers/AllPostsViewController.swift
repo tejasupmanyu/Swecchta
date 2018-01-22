@@ -14,7 +14,7 @@ class AllPostsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var EmptyView: UIView!
+    
     
     static var uid = FIRAuth.auth()?.currentUser?.uid
     static var profileImageURLString : String?
@@ -28,7 +28,6 @@ class AllPostsViewController: UIViewController {
         super.viewDidLoad()
         downloadUserProfile()
         // Do any additional setup after loading the view.
-        EmptyView.isHidden = true
         tableView.dataSource = self
         tableView.delegate = self
         loadMyPosts()
@@ -51,13 +50,11 @@ class AllPostsViewController: UIViewController {
                 {
                     
                     UserInfo.userProfileImageURL = dict["profile_Image_URLString"] as? String
-                    //print("Ye hai url - \(UserInfo.userProfileImageURL!)")
+                    print("Ye hai url - \(UserInfo.userProfileImageURL!)")
                     UserInfo.userName = dict["user_name"] as? String
                     
                     defaults.set(dict["user_name"], forKey: "userName")
                     defaults.set(dict["profile_Image_URLString"], forKey:"userProfileImageURL")
-                    
-                    UserInfo.userProfileImageView?.sd_setImage(with: URL(string: UserInfo.userProfileImageURL!))
                 }
                     
                 else
@@ -83,13 +80,11 @@ class AllPostsViewController: UIViewController {
                 
                 if allPosts.count == 0
                 {
-                    self.EmptyView.isHidden = false
                     //self.tableView.isHidden = true
                     return
                 }
                 else
                 {
-                    self.EmptyView.isHidden = true
                     //self.tableView.isHidden = false
                     
                     for (_,posts) in allPosts
@@ -149,7 +144,14 @@ extension AllPostsViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as!  AllPostsTableViewCell
         
-        cell.UserProfileImage.sd_setImage(with: URL(string : UserDefaults.standard.string(forKey: "userProfileImageURL")!), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
+        if let imgURL = UserDefaults.standard.string(forKey: "userProfileImageURL")
+        {
+            cell.UserProfileImage.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "userprofileimage"))
+        }
+        else
+        {
+            cell.UserProfileImage.image = #imageLiteral(resourceName: "userprofileimage")
+        }
         cell.postImageView.sd_showActivityIndicatorView()
         cell.postImageView.sd_setIndicatorStyle(.whiteLarge)
         cell.postImageView.sd_setImage(with: URL(string: self.posts[indexPath.section].postImageURL!), placeholderImage: UIImage(named:"placeholder"), options: [.progressiveDownload,.continueInBackground,.scaleDownLargeImages,])
